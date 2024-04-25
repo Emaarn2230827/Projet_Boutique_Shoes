@@ -34,3 +34,29 @@ footer
   &:hover
     color: #FF0000 /* Rouge */
     border-color: #FF0000 /* Rouge */
+
+.card:hover 
+  transform: scale(1.05)
+  transition: transform 0.3s ease-in-out
+
+.card:hover .card-img-top 
+  filter: brightness(80%)
+
+.scrolling-text 
+  color: red
+  white-space: nowrap
+  overflow: hidden
+  animation: scrollLeft 10s linear infinite
+
+
+@keyframes scrollLeft 
+  0% 
+    transform: translateX(100%)
+  
+  100% 
+    transform: translateX(-100%)
+  
+.btn-outline-danger
+    padding: 10px
+    margin: 10px
+

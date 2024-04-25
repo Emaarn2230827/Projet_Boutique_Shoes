@@ -9,6 +9,16 @@ export default function Homme() {
     <main>
       <Header />
       <br/>
+      <form className="d-flex" role="search">
+              <input className="form-control me-2" type="search" placeholder="Rechercher une chaussure" aria-label="Search" style={{width: 500}} />
+              <button className="btn btn-outline-danger" type="submit">Rechercher</button>
+  
+      </form>
+      <br/>
+
+      <Image src="/images/pubH.jpg"  alt="logo" width={1250} height={500}></Image>
+      <br/>
+      <br/>
       <ShoesList />
       <br/>
       <Footer />
