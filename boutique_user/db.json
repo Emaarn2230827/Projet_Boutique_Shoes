@@ -1,0 +1,20 @@
+{
+
+"chaussures": [
+    {
+      "id": "1",
+      "nom": "Air Jordan 1",
+      "image": "/images/shoesH/sh1.jpg",
+      "prix": 400,
+      "disponibilite": true
+    },
+    {
+      "id": "2",
+      "nom": " Jordan 4 retro",
+      "image": "/images/shoesH/sh2.jpg",
+      "prix": 500,
+      "disponibilite": false
+    }
+]
+      
+}

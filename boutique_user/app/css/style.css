@@ -1,0 +1,43 @@
+header {
+  background-color: #050C16;
+}
+
+footer {
+  background-color: #050C16;
+}
+
+@keyframes showLetters {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.message-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.message {
+  display: inline-block;
+  animation: showLetters 5s steps(15);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  font-size: 23px;
+  color: #333333;
+  text-align: center;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.message:hover {
+  color: #FF0000;
+  border-color: #FF0000;
+}
+
+/*# sourceMappingURL=style.css.map */
