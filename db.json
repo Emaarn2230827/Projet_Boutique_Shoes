@@ -6,9 +6,10 @@
       "nom": "Air Jordan 1",
       "image": "/images/shoesH/sh1.jpg",
       "prix": 400,
-      "totalEnStock": 10,
+      "totalEnStock": 22,
       "description": "Cette chaussure de basketball emblématique évoque les années 80 avec son empeigne en cuir premium stylée et incroyablement souple",
       "tailles": ["38", "39", "40", "41", "42", "43", "44"],
+      "totalParTailles": [4, 5, 2, 5, 2, 3, 1],
       "disponibilite": true
     },
     {
@@ -19,6 +20,7 @@
       "totalEnStock": 0,
       "description": " Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
       "tailles": ["38", "39", "40", "41", "42", "43", "44"],
+      "totalParTailles": [0, 0, 0, 0, 0, 0,0],
       "disponibilite": false
     }
 ]
