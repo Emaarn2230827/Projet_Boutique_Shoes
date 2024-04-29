@@ -1,5 +1,6 @@
 
 function ContenuAccueil() {
+
     return (
         <>
         <div className="message-container">
@@ -7,10 +8,10 @@ function ContenuAccueil() {
         </div>
         <p> Les chaussures de toutes les marques à votre disposition et à des prix imbattables!!!</p>
         <br />
-        <video controls width="100%" height="370" >
-                <source src="/videos/pub1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+        <video  controls width="100%" height="370">
+             <source src="/videos/pub1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+        </video>
         </>
 
     );

@@ -1,15 +1,30 @@
 {
-
-"chaussures": [
+  "chaussures": [
     {
       "id": "1",
       "nom": "Air Jordan 1",
       "image": "/images/shoesH/sh1.jpg",
       "prix": 400,
-      "totalEnStock": 22,
+      "totalEnStock": 56,
       "description": "Cette chaussure de basketball emblématique évoque les années 80 avec son empeigne en cuir premium stylée et incroyablement souple",
-      "tailles": ["38", "39", "40", "41", "42", "43", "44"],
-      "totalParTailles": [4, 5, 2, 5, 2, 3, 1],
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
       "disponibilite": true
     },
     {
@@ -19,10 +34,96 @@
       "prix": 500,
       "totalEnStock": 0,
       "description": " Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
-      "tailles": ["38", "39", "40", "41", "42", "43", "44"],
-      "totalParTailles": [0, 0, 0, 0, 0, 0,0],
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "disponibilite": false
+    },
+    {
+      "id": "f685",
+      "nom": "terror2",
+      "image": "/images/shoesH/sh3.jpg",
+      "prix": "399",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": false,
+      "description": "jj"
+    },
+    {
+      "id": "1af4",
+      "nom": "terror5",
+      "image": "/images/shoesH/sh4.jpg",
+      "prix": "700",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": true,
+      "description": ""
     }
-]
-      
+  ],
+  "pannier": [
+    {
+      "id": "1",
+      "nom": "Air Jordan 1",
+      "image": "/images/shoesH/sh1.jpg",
+      "prix": 400,
+      "taille": "38",
+      "quantite": 2
+    }
+  ],
+  "loginAdmin": [
+    {
+      "id": "1",
+      "nom": "ilovecats",
+      "password": "ihatedogs"
+    }
+  ]
 }
