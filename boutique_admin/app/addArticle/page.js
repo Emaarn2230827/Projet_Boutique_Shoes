@@ -1,9 +1,14 @@
 "use client";
 import { useState } from 'react';
 import addShoes from './addArticleServer';
+import { useRouter } from 'next/navigation';
 
 function AddShoesForm() {
-  
+  const router = useRouter();
+  async function addChaussure(formData) {
+    await addShoes(formData);
+    router.push('../inventaire');
+  }
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -11,7 +16,7 @@ function AddShoesForm() {
           <div className="card border-0 bg-light shadow">
             <div className="card-body p-5">
               <h2 className="card-title text-center mb-4">Ajouter une chaussure</h2>
-              <form action={addShoes}>
+              <form action={addChaussure}>
                 <div className="form-group">
                   <label htmlFor="nom">Nom de la chaussure</label>
                   <input type="text" className="form-control" id="nom" name="nom"required />

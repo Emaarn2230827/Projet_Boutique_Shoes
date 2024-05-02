@@ -82,7 +82,6 @@
       "description": "jj"
     },
     {
-      "id": "1af4",
       "nom": "terror5",
       "image": "/images/shoesH/sh4.jpg",
       "prix": "700",
@@ -106,17 +105,126 @@
         10
       ],
       "disponibilite": true,
-      "description": ""
+      "description": "dfgdfg",
+      "id": "1af4"
+    },
+    {
+      "nom": "terror14",
+      "image": "/images/shoesH/sh3.jpg",
+      "prix": "800",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": true,
+      "description": "popopo",
+      "id": "067f"
+    },
+    {
+      "id": "67c2",
+      "nom": "terror10",
+      "image": "/images/shoesH/sh2.jpg",
+      "prix": "700",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": true,
+      "description": "upupu"
+    },
+    {
+      "id": "2769",
+      "nom": "thunder",
+      "image": "/images/shoesH/sh4.jpg",
+      "prix": "100",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": false,
+      "description": "test"
     }
   ],
-  "pannier": [
+  "panier": [
     {
       "id": "1",
-      "nom": "Air Jordan 1",
-      "image": "/images/shoesH/sh1.jpg",
-      "prix": 400,
-      "taille": "38",
-      "quantite": 2
+      "idShoes": "1",
+      "tailleShoes": "38"
+    },
+    {
+      "id": "2",
+      "idShoes": "1af4",
+      "tailleShoes": "39"
+    },
+    {
+      "id": "2ef2",
+      "idShoes": "1",
+      "tailleShoes": "43"
+    },
+    {
+      "id": "a4cd",
+      "idShoes": "1",
+      "tailleShoes": "43"
+    },
+    {
+      "id": "2651",
+      "idShoes": "1",
+      "tailleShoes": ""
+    },
+    {
+      "id": "7209",
+      "idShoes": "1",
+      "tailleShoes": ""
+    },
+    {
+      "id": "426b",
+      "idShoes": "1",
+      "tailleShoes": "43"
     }
   ],
   "loginAdmin": [

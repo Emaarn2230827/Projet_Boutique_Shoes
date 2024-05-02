@@ -8,7 +8,7 @@
         const description = formData.get('description');
 
         await fetch(`http://localhost:3000/chaussures/${id}`, {
-            method: 'PATCH',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },

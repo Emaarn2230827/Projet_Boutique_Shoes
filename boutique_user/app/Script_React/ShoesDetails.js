@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import addShoesPannier from '../pannier/addPannierServer';
+import addShoesPanier from '../panier/addPanierServer';
+import { useRouter } from 'next/navigation';
 
 function ShoesDetails({ chaussureId }) {
   const [chaussure, setChaussure] = useState({});
   const [selectedTaille, setSelectedTaille] = useState('');
   const [articlesDisponibles, setArticlesDisponibles] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchChaussure() {
@@ -22,6 +24,7 @@ function ShoesDetails({ chaussureId }) {
     fetchChaussure();
   }, [chaussureId]);
 
+// en fonction de la taille selectionner on affiche le nombre d'article disponible
   useEffect(() => {
     if (selectedTaille) {
       const index = chaussure.tailles.indexOf(selectedTaille);
@@ -34,7 +37,10 @@ function ShoesDetails({ chaussureId }) {
   const handleTailleChange = (event) => {
     setSelectedTaille(event.target.value);
   };
-
+  async function addChaussurePanier(formData) {
+    await addShoesPanier(formData, chaussureId);
+    router.push('../panier');
+  }
   return (
     <div className="container-fluid">
       <br />
@@ -44,19 +50,21 @@ function ShoesDetails({ chaussureId }) {
           <p className="col-8 col-lg-8"><h3>Description</h3> {chaussure.description}</p>
         </div>
         <div className="col-6 col-lg-6">
-          <h2 className="col-12 col-lg-12">{chaussure.nom}</h2>
-          <p className="col-12 col-lg-12">Prix: {chaussure.prix}$CA</p>
-          <label htmlFor="taille" className="col-4 col-lg-4">Sélectionner la taille :</label>
-          <select id="taille" className="col-8 col-lg-8" style={{ width: '160px' }} align="left" onChange={handleTailleChange}>
-            <option value="">Choisissez une taille</option>
-            {chaussure.tailles && chaussure.tailles.map((taille, index) => (
-              <option key={index} value={taille}>{taille} EU</option>
-            ))}
-          </select>
-          <br />
-          <br />
-          <p className="col-12 col-lg-12">Nombre d'articles disponibles: {articlesDisponibles}</p>
-          <button className="btn btn-outline-danger">Ajouter au panier</button>
+          <form action={addChaussurePanier}>
+            <h2 className="col-12 col-lg-12">{chaussure.nom}</h2>
+            <p className="col-12 col-lg-12">Prix: {chaussure.prix}$CA</p>
+            <label htmlFor="taille" className="col-4 col-lg-4">Sélectionner la taille :</label>
+            <select id="taille" className="col-8 col-lg-8" style={{ width: '160px' }} align="left" name="tailleShoes" onChange={handleTailleChange}>
+              <option value="">Choisissez une taille</option>
+              {chaussure.tailles && chaussure.tailles.map((taille, index) => (
+                <option key={index} value={taille} >{taille} EU</option>
+              ))}
+            </select>
+            <br />
+            <br />
+            <p className="col-12 col-lg-12">Nombre d'articles disponibles: {articlesDisponibles}</p>
+            <button className="btn btn-outline-danger">Ajouter au panier</button>
+          </form>
         </div>
       </div>
     </div>
