@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ShoesCard from './ShoesCard';
 function ShoesList() {
     const [Shoes, setShoes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function fetchShoes() {
@@ -16,19 +17,35 @@ function ShoesList() {
                 
                 const json = await response.json();
                 setShoes(json);
+                setLoading(false);
             } catch (error) {
                 console.error('Erreur lors de la récupération des données du serveur:', error);
             }
         }
         fetchShoes();
-    }, []);
-    const ShoesNonSupprimes = Shoes.filter(Shoes => Shoes.disponibilite);
-    return (
-        <div className="row">         
-            {ShoesNonSupprimes.map(sh => (
-                <ShoesCard key={sh.id} id={sh.id} nom={sh.nom} prix={sh.prix} image={sh.image} />
-            ))}
+        const intervalId = setInterval(() => {
+            fetchShoes(); 
+        }, 2000);
 
+        // Nettoyage de l'intervalle lors du démontage du composant
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
+   
+    return (
+        <div className="container-fluid">
+            <div className="row align-items-center">
+                {loading ? (
+                    <p>Chargement...</p>
+                ) : Shoes.length > 0 ? (
+                    Shoes.map(shoe => (
+                        <ShoesCard key={shoe.id} id={shoe.id} nom={shoe.nom} prix={shoe.prix} image={shoe.image} disponibilite={shoe.disponibilite} />
+                    ))
+                ) : (
+                    <h1 className="scrolling-text">Aucune chaussure enregistrée</h1>
+                    )}
+            </div>
         </div>
     );
 

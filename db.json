@@ -28,12 +28,37 @@
       "disponibilite": true
     },
     {
-      "id": "2",
       "nom": " Jordan 4 retro",
       "image": "/images/shoesH/sh2.jpg",
-      "prix": 500,
-      "totalEnStock": 0,
+      "prix": "500",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": "on",
       "description": " Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
+      "id": "2"
+    },
+    {
+      "nom": "terror10",
+      "image": "/images/shoesH/sh2.jpg",
+      "prix": "700",
+      "totalEnStock": 0,
       "tailles": [
         "38",
         "39",
@@ -52,181 +77,12 @@
         0,
         0
       ],
-      "disponibilite": false
-    },
-    {
-      "id": "f685",
-      "nom": "terror2",
-      "image": "/images/shoesH/sh3.jpg",
-      "prix": "399",
-      "totalEnStock": 56,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": false,
-      "description": "jj"
-    },
-    {
-      "nom": "terror5",
-      "image": "/images/shoesH/sh4.jpg",
-      "prix": "700",
-      "totalEnStock": 56,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": true,
-      "description": "dfgdfg",
-      "id": "1af4"
-    },
-    {
-      "nom": "terror14",
-      "image": "/images/shoesH/sh3.jpg",
-      "prix": "800",
-      "totalEnStock": 56,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": true,
-      "description": "popopo",
-      "id": "067f"
-    },
-    {
-      "id": "67c2",
-      "nom": "terror10",
-      "image": "/images/shoesH/sh2.jpg",
-      "prix": "700",
-      "totalEnStock": 56,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": true,
-      "description": "upupu"
-    },
-    {
-      "id": "2769",
-      "nom": "thunder",
-      "image": "/images/shoesH/sh4.jpg",
-      "prix": "100",
-      "totalEnStock": 56,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": false,
-      "description": "test"
+      "disponibilite": null,
+      "description": "upupu",
+      "id": "67c2"
     }
   ],
-  "panier": [
-    {
-      "id": "1",
-      "idShoes": "1",
-      "tailleShoes": "38"
-    },
-    {
-      "id": "2",
-      "idShoes": "1af4",
-      "tailleShoes": "39"
-    },
-    {
-      "id": "2ef2",
-      "idShoes": "1",
-      "tailleShoes": "43"
-    },
-    {
-      "id": "a4cd",
-      "idShoes": "1",
-      "tailleShoes": "43"
-    },
-    {
-      "id": "2651",
-      "idShoes": "1",
-      "tailleShoes": ""
-    },
-    {
-      "id": "7209",
-      "idShoes": "1",
-      "tailleShoes": ""
-    },
-    {
-      "id": "426b",
-      "idShoes": "1",
-      "tailleShoes": "43"
-    }
-  ],
+  "panier": [],
   "loginAdmin": [
     {
       "id": "1",

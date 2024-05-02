@@ -41,6 +41,7 @@ function ShoesDetails({ chaussureId }) {
     await addShoesPanier(formData, chaussureId);
     router.push('../panier');
   }
+  if (chaussure.disponibilite || chaussure.totalEnStock > 0) {
   return (
     <div className="container-fluid">
       <br />
@@ -54,7 +55,7 @@ function ShoesDetails({ chaussureId }) {
             <h2 className="col-12 col-lg-12">{chaussure.nom}</h2>
             <p className="col-12 col-lg-12">Prix: {chaussure.prix}$CA</p>
             <label htmlFor="taille" className="col-4 col-lg-4">Sélectionner la taille :</label>
-            <select id="taille" className="col-8 col-lg-8" style={{ width: '160px' }} align="left" name="tailleShoes" onChange={handleTailleChange}>
+            <select id="taille" className="col-8 col-lg-8" style={{ width: '160px' }} align="left" name="tailleShoes" onChange={handleTailleChange} required>
               <option value="">Choisissez une taille</option>
               {chaussure.tailles && chaussure.tailles.map((taille, index) => (
                 <option key={index} value={taille} >{taille} EU</option>
@@ -69,6 +70,18 @@ function ShoesDetails({ chaussureId }) {
       </div>
     </div>
   );
+  }	else {
+    return (
+      <div className="container-fluid">
+          <br />
+          <div className="row">
+              <div className="col-lg-12">
+              <h1 className="scrolling-text">Cet article n'est actuellement pas disponible.</h1>
+              </div>
+          </div>
+      </div>
+  );
+  }
 }
 
 export default ShoesDetails;

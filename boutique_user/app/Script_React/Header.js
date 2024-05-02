@@ -26,9 +26,9 @@ function Header() {
                                 <Link className="nav-link mx-5" href="/categorieShoes/enfant">Enfant</Link>
                             </li>
                             <li className="nav-item col-lg-2">
-                                <a className="nav-link mx-5" href="#">
-                                    <Image src="/images/pannier.png" alt="logoConnexion" id="logoConnexion" width={25} height={25}/>
-                                </a>
+                                <Link className="nav-link mx-5" href="/panier">
+                                    <Image src="/images/pannier.png" alt="logoPannier" id="logoPannier" width={25} height={25}/>
+                                </Link>
                             </li>
                         </ul>
                     </div>

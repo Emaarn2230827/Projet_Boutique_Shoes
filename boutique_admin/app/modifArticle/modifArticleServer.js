@@ -6,6 +6,7 @@
         const image = formData.get('image');
         const prix = formData.get('prix');
         const description = formData.get('description');
+        const disponibilite = formData.get('disponibilite');
 
         await fetch(`http://localhost:3000/chaussures/${id}`, {
             method: 'PUT',
@@ -16,12 +17,11 @@
                 nom: nom,
                 image: image,
                 prix: prix,
-                totalEnStock: 56,
-                tailles: ["38","39", "40", "41", "42", "43", "44"],
-                totalParTailles: [5,5,8,8,10,10,10],
-                disponibilite: true,
+                totalEnStock: disponibilite ? 56 : 0,
+                tailles: ["38", "39", "40", "41", "42", "43", "44"],
+                totalParTailles: disponibilite ? [5, 5, 8, 8, 10, 10, 10] : [0, 0, 0, 0, 0, 0, 0],
+                disponibilite: disponibilite,
                 description: description
             })
-      
         });
     }

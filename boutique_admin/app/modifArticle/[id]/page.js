@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 export default function ModifShoesForm({params}) {
   const [chaussure, setChaussure] = useState({});
+  const [disponibilite, setDisponibilite] = useState(false);
   const router = useRouter();
 
 
@@ -27,10 +28,15 @@ export default function ModifShoesForm({params}) {
     fetchChaussure();
 }, [params.id]);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setChaussure({ ...chaussure, [name]: value });
-  };
+const handleChange = (event) => {
+  const { name, value, type, checked } = event.target;
+  const newValue = type === 'checkbox' ? checked : value;
+  if (name === 'disponibilite') {
+    setDisponibilite(newValue);
+  }
+  setChaussure({ ...chaussure, [name]: newValue });
+};
+
 
   async function modifChaussure(formData) {
     await modifShoes(formData);
@@ -66,6 +72,10 @@ export default function ModifShoesForm({params}) {
                   <div className="form-group">
                     <label htmlFor="description">Description</label>
                     <textarea className="form-control" id="description" name="description"  value={chaussure.description} onChange={handleChange}></textarea>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="disponibilite">Disponibile</label>
+                    <input type="checkbox" id="disponibilite" name="disponibilite" checked={disponibilite} onChange={handleChange}/>
                   </div>
                   <button type="submit" className="btn btn-danger btn-block">Update</button>
                 </form>
