@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ShoesCard from './ShoesCard';
+import { Button } from 'bootstrap';
 function ShoesList() {
     const [Shoes, setShoes] = useState([]);
     const [loading, setLoading] = useState(true);

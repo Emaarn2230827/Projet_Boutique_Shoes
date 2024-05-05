@@ -3,6 +3,8 @@
     export default async function addShoesPanier(formData, idShoes) {
       
         const tailleShoes = formData.get('tailleShoes');
+        const quantiteShoes = formData.get('quantiteShoes');
+
 
         await fetch('http://localhost:3000/panier', {
             method: 'POST',
@@ -11,7 +13,9 @@
             },
             body: JSON.stringify({
                 idShoes: idShoes,
-                tailleShoes: tailleShoes
+                idRecap: "1",
+                tailleShoes: tailleShoes,
+                quantiteShoes: quantiteShoes
             })
       
         });

@@ -82,7 +82,39 @@
       "id": "67c2"
     }
   ],
-  "panier": [],
+  "panier": [
+    {
+      "id": "75b3",
+      "idShoes": "1",
+      "idRecap": "1",
+      "tailleShoes": "40",
+      "quantiteShoes": "1"
+    },
+    {
+      "id": "0be7",
+      "idShoes": "2",
+      "idRecap": "1",
+      "tailleShoes": "40",
+      "quantiteShoes": "6"
+    },
+    {
+      "id": "729d",
+      "idShoes": "1",
+      "idRecap": "1",
+      "tailleShoes": "41",
+      "quantiteShoes": "3"
+    }
+  ],
+  "commandeShoes ": [
+    {}
+  ],
+  "commande": [
+    {
+      "prixTotal": 4600,
+      "frais": 10,
+      "id": "1"
+    }
+  ],
   "loginAdmin": [
     {
       "id": "1",

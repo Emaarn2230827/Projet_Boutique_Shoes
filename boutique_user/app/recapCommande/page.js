@@ -1,13 +1,12 @@
 import Header from "../Script_React/Header";
 import Footer from "../Script_React/Footer";
-import PanierList from "./panierList";
-export default function Pannier() {
+import FormRecap from "./formRecap";
+export default function RecapCommande() {
+
     return (
         <main>
             <Header />
-            <br/>
-            <PanierList />
-            <br/>
+            <FormRecap />
             <Footer />
         </main>
     );

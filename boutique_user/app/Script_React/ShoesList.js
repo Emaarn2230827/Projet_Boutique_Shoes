@@ -33,6 +33,7 @@ function ShoesList() {
                 {chaussures.map(ch => (
                     <ShoesCard key={ch.id} id={ch.id} nom={ch.nom} image={ch.image} prix={ch.prix} disponibilite={ch.disponibilite}/>
                 ))}
+            
             </div>
         </div>
     );
