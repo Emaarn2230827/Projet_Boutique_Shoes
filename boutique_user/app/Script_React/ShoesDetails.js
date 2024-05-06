@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import addShoesPanier from '../panier/addPanierServer';
-import { useRouter } from 'next/navigation';
+
 
 function ShoesDetails({ chaussureId }) {
   const [chaussure, setChaussure] = useState({});
@@ -11,11 +11,11 @@ function ShoesDetails({ chaussureId }) {
   const [quantite, setQuantite] = useState(1); 
   const [options, setOptions] = useState([]);
 
+  
   const handleChangeQuantite = (event) => {
     setQuantite(parseInt(event.target.value)); 
   };
 
-  const router = useRouter();
 
   useEffect(() => {
     async function fetchChaussure() {
@@ -51,7 +51,6 @@ function ShoesDetails({ chaussureId }) {
     }
   }, [selectedTaille, articlesDisponibles]);
   
-
   useEffect(() => {
     if (chaussure && chaussure.tailles) {
       const index = chaussure.tailles.indexOf(taille);
@@ -68,8 +67,12 @@ function ShoesDetails({ chaussureId }) {
     setSelectedTaille(event.target.value);
   };
   async function addChaussurePanier(formData) {
-    await addShoesPanier(formData, chaussureId);
-    router.push('../panier');
+    try {
+      await addShoesPanier(formData, chaussureId);
+      alert("Article ajouté au panier");     
+    } catch (error) {
+      console.error("Erreur lors de l'ajout de l'article au panier :", error);
+    }
   }
   if (chaussure.disponibilite || chaussure.totalEnStock > 0) {
   return (
@@ -99,7 +102,7 @@ function ShoesDetails({ chaussureId }) {
                 {options}
               </select>
             </p>
-            <button className="btn btn-outline-danger">Ajouter au panier</button>
+            <button type='submit' className="btn btn-outline-danger">Ajouter au panier</button>
           </form>
         </div>
       </div>

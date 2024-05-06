@@ -4,7 +4,7 @@ export async function AddRecapServer(formData) {
 
     const prixTotal = formData.get('prixTotal');
 
-    await fetch('http://localhost:3000/commande/1', {
+    await fetch('http://localhost:3000/commandeShoes/1', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

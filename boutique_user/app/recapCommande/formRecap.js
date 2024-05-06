@@ -6,7 +6,7 @@ export default function FormRecap() {
     useEffect(() => {
         async function fetchCommande() {
           try {
-            const response = await fetch(`http://localhost:3000/commande/1`);
+            const response = await fetch(`http://localhost:3000/commandeShoes/1`);
             const json = await response.json();
             setCommandes(json);
           } catch (error) {
