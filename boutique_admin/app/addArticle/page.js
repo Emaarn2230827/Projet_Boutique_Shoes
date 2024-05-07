@@ -22,11 +22,11 @@ function AddShoesForm() {
                 <form action={addChaussure}>
                   <div className="form-group">
                     <label htmlFor="nom">Nom de la chaussure</label>
-                    <input type="text" className="form-control" id="nom" name="nom" required />
+                    <input type="text" className="form-control" id="nom" name="nom" accept="image/*" required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="image">URL de l'image</label>
-                    <input type="text" className="form-control" id="image" name="image"  required />
+                    <input type="file" className="form-control" id="image" name="image"  required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="prix">Prix</label>

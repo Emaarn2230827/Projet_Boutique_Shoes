@@ -15,8 +15,14 @@ export default function Homme() {
   
       </form>
       <br/>
-
-      <Image src="/images/pubH.jpg"  alt="logo" width={1250} height={500}></Image>
+      <div className="container-fluid">
+        <br/>
+        <div className="row">
+        <figure className="col-12 col-lg-12">
+        <Image src="/images/pubH.jpg"  alt="logo" width={2000} height={516}></Image>
+        </figure>
+        </div>
+      </div>
       <br/>
       <br/>
       <ShoesList />

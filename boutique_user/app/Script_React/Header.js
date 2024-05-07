@@ -14,7 +14,7 @@ function Header() {
     <header>
       <div className="container-fluid">
         <nav className="row align-items-center navbar navbar-expand-lg navbar-dark">
-          <p className="col-6 col-lg-2 align-items-left">
+          <p className="col-6 col-lg-3 align-items-left">
             <Image src="/images/logo.jpg" className="navbar-brand" alt="logo" id="logo" width={115} height={115} />
           </p>
           <button
@@ -26,10 +26,10 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className={`col-6 col-lg-10 align-items-center collapse navbar-collapse ${menuOpen ? 'show' : ''}`}
+            className={`col-6 col-lg-9 align-items-center collapse navbar-collapse ${menuOpen ? 'show' : ''}`}
             id="navbarNav"
           >
-            <ul className="navbar-nav row align-items-center">
+            <ul className="navbar-nav  align-items-center col-lg-12">
               <li className="nav-item col-lg-2">
                 <Link href="/" className="nav-link mx-5">
                   Accueil
@@ -50,7 +50,7 @@ function Header() {
                   Enfant
                 </Link>
               </li>
-              <li className="nav-item col-lg-2 align-items-right">
+              <li className="nav-item col-lg-3 " align="right">
                 <Link href="/panier" className="nav-link mx-5">
                   <Image src="/images/pannier.png" alt="logoPanier" id="logoPanier" width={25} height={25} />
                 </Link>

@@ -51,17 +51,17 @@ function ShoesDetails({ chaussureId }) {
     }
   }, [selectedTaille, articlesDisponibles]);
   
-  useEffect(() => {
-    if (chaussure && chaussure.tailles) {
-      const index = chaussure.tailles.indexOf(taille);
-      const qteShoes = index >= 0 ? chaussure.totalParTailles[index] : 0;
-      const newOptions = [];
-      for (let i = 1; i <= qteShoes; i++) {
-        newOptions.push(<option key={i} value={i}>{i}</option>);
-      }
-      setOptions(newOptions);
-    }
-  }, [chaussure, selectedTaille]);
+  // useEffect(() => {
+  //   if (chaussure && chaussure.tailles) {
+  //     const index = chaussure.tailles.indexOf(taille);
+  //     const qteShoes = index >= 0 ? chaussure.totalParTailles[index] : 0;
+  //     const newOptions = [];
+  //     for (let i = 1; i <= qteShoes; i++) {
+  //       newOptions.push(<option key={i} value={i}>{i}</option>);
+  //     }
+  //     setOptions(newOptions);
+  //   }
+  // }, [chaussure, selectedTaille]);
 
   const handleTailleChange = (event) => {
     setSelectedTaille(event.target.value);
