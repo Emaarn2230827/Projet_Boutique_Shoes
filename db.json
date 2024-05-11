@@ -1,63 +1,9 @@
 {
   "chaussures": [
     {
-      "id": "1",
       "nom": "Air Jordan 1",
-      "image": "/images/shoesH/sh1.png",
-      "prix": 400,
-      "totalEnStock": 56,
-      "description": "Cette chaussure de basketball emblématique évoque les années 80 avec son empeigne en cuir premium stylée et incroyablement souple",
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        5,
-        5,
-        8,
-        8,
-        10,
-        10,
-        10
-      ],
-      "disponibilite": true
-    },
-    {
-      "nom": " Jordan 4 retro",
-      "image": "/images/shoesH/sh2.jpg",
-      "prix": "500",
-      "totalEnStock": 0,
-      "tailles": [
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44"
-      ],
-      "totalParTailles": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "disponibilite": null,
-      "description": " Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
-      "id": "2"
-    },
-    {
-      "nom": "terror10",
-      "image": "/images/shoesH/sh2.jpg",
-      "prix": "700",
+      "image": "/images/shoesH/sh3.jpg",
+      "prix": "400",
       "totalEnStock": 56,
       "tailles": [
         "38",
@@ -78,38 +24,65 @@
         10
       ],
       "disponibilite": "on",
-      "description": "upupu",
-      "id": "67c2"
-    }
-  ],
-  "panier": [
-    {
-      "id": "ad30",
-      "idShoes": "1",
-      "idRecap": "1",
-      "tailleShoes": "39",
-      "quantiteShoes": "2"
-    },
-    {
-      "id": "d92d",
-      "idShoes": "2",
-      "idRecap": "1",
-      "tailleShoes": "40",
-      "quantiteShoes": "1"
-    },
-    {
-      "id": "56fa",
-      "idShoes": "2",
-      "idRecap": "1",
-      "tailleShoes": "42",
-      "quantiteShoes": "6"
-    }
-  ],
-  "commandeShoes": [
-    {
-      "prixTotal": 4300,
-      "frais": 10,
+      "description": "Cette chaussure de basketball emblématique évoque les années 80 avec son empeigne en cuir premium stylée et incroyablement souple",
+      "lienPaiement": "https://buy.stripe.com/test_eVaeVxeJu7ZSbeMeUW",
       "id": "1"
+    },
+    {
+      "nom": " Jordan 4 retro",
+      "image": "/images/shoesH/sh2.jpg",
+      "prix": "450",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": "on",
+      "description": " Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
+      "lienPaiement": "https://buy.stripe.com/test_7sIeVxate3JC82AfYZ",
+      "id": "2"
+    },
+    {
+      "nom": "Hyper Venom",
+      "image": "/images/shoesH/sh4.jpg",
+      "prix": "800",
+      "totalEnStock": 56,
+      "tailles": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "totalParTailles": [
+        5,
+        5,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "disponibilite": "on",
+      "description": "La Hyper Venom s'inspire du design de la AJ4, pour un style unique qui a fait ses preuves. Et en plus, cette paire a été conçue pour les enfants : les lacets élastiques avec lanière à scratch permettent d'enfiler et de retirer facilement la chaussure.",
+      "lienPaiement": "https://buy.stripe.com/test_4gw3cP0SEbc4fv2bII",
+      "id": "9cdd"
     }
   ],
   "loginAdmin": [

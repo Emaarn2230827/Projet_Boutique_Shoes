@@ -6,6 +6,7 @@ function Inventaire() {
     return (
         <>
             <Header />
+            <br />
             <ShoesList />
         </>
     );

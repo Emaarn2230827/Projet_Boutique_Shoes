@@ -50,18 +50,6 @@ function ShoesDetails({ chaussureId }) {
       setOptions(newOptions);
     }
   }, [selectedTaille, articlesDisponibles]);
-  
-  // useEffect(() => {
-  //   if (chaussure && chaussure.tailles) {
-  //     const index = chaussure.tailles.indexOf(taille);
-  //     const qteShoes = index >= 0 ? chaussure.totalParTailles[index] : 0;
-  //     const newOptions = [];
-  //     for (let i = 1; i <= qteShoes; i++) {
-  //       newOptions.push(<option key={i} value={i}>{i}</option>);
-  //     }
-  //     setOptions(newOptions);
-  //   }
-  // }, [chaussure, selectedTaille]);
 
   const handleTailleChange = (event) => {
     setSelectedTaille(event.target.value);
@@ -80,15 +68,15 @@ function ShoesDetails({ chaussureId }) {
       <br />
       <div className="row">
         <div className="col-6 col-lg-6">
-          <Image src={chaussure.image} alt={chaussure.nom} width={280} height={300} />
-          <p className="col-8 col-lg-8"><h3>Description</h3> {chaussure.description}</p>
+          <Image src={chaussure.image} alt={chaussure.nom} width={330} height={300} />
+          <p className="col-8 col-lg-8 contenuLambda"><h3 >Description</h3> {chaussure.description}</p>
         </div>
         <div className="col-6 col-lg-6">
           <form action={addChaussurePanier}>
             <h2 className="col-12 col-lg-12">{chaussure.nom}</h2>
-            <p className="col-12 col-lg-12">Prix: {chaussure.prix}$CA</p>
-            <label htmlFor="taille" className="col-4 col-lg-4">Sélectionner la taille :</label>
-            <select id="taille" className="col-8 col-lg-8" style={{ width: '170px' }} align="left" name="tailleShoes" onChange={handleTailleChange} required>
+            <p className="col-12 col-lg-12 contenuLambda">Prix: {chaussure.prix}$CA</p>
+            <label htmlFor="taille" className="col-4 col-lg-4 contenuLambda">Sélectionner la taille :</label>
+            <select id="taille" className="col-8 col-lg-8 contenuLambda" style={{ width: '220px' }} align="left" name="tailleShoes" onChange={handleTailleChange} required>
               <option value="">Choisissez une taille</option>
               {chaussure.tailles && chaussure.tailles.map((taille, index) => (
                 <option key={index} value={taille} >{taille} EU</option>
@@ -96,8 +84,8 @@ function ShoesDetails({ chaussureId }) {
             </select>
             <br />
             <br />
-            <p className="col-12 col-lg-12">Nombre d'articles disponibles: {articlesDisponibles}</p>
-            <p className="card-text">Quantité:
+            <p className="col-12 col-lg-12  contenuLambda">Nombre d'articles disponibles: {articlesDisponibles}</p>
+            <p className="card-text col-12 col-lg-12 contenuLambda">Quantité:
               <select value={quantite} onChange={handleChangeQuantite} name="quantiteShoes">
                 {options}
               </select>

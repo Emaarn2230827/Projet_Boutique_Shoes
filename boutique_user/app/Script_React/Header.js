@@ -31,22 +31,22 @@ function Header() {
           >
             <ul className="navbar-nav  align-items-center col-lg-12">
               <li className="nav-item col-lg-2">
-                <Link href="/" className="nav-link mx-5">
+                <Link href="/" className="nav-link mx-5 contenuLambda">
                   Accueil
                 </Link>
               </li>
               <li className="nav-item col-lg-2">
-                <Link href="/categorieShoes/homme" className="nav-link mx-5">
+                <Link href="/categorieShoes/homme" className="nav-link mx-5 contenuLambda">
                   Homme
                 </Link>
               </li>
               <li className="nav-item col-lg-2">
-                <Link href="/categorieShoes/femme" className="nav-link mx-5">
+                <Link href="/categorieShoes/femme" className="nav-link mx-5 contenuLambda">
                   Femme
                 </Link>
               </li>
               <li className="nav-item col-lg-2">
-                <Link href="/categorieShoes/enfant" className="nav-link mx-5">
+                <Link href="/categorieShoes/enfant" className="nav-link mx-5 contenuLambda">
                   Enfant
                 </Link>
               </li>

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "sass": "sass ./app/css/style.sass ./app/css/style.css",
+    "sass": "sass ../css/style.sass ../css/style.css",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

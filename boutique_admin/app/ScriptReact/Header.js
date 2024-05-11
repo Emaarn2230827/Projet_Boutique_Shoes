@@ -21,7 +21,7 @@ function Header() {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={`col-6 col-lg-9 align-items-center collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
+                    <div className={`contenuLambda col-6 col-lg-9 align-items-center collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav ">
                         <ul className="navbar-nav  align-items-center col-lg-12 ">
                             <li className="nav-item col-lg-5">
                                 <Link href="/inventaire" className="nav-link mx-5" >Inventaire</Link>

@@ -37,20 +37,20 @@ function Login() {
         <div className="col-md-6">
           <div className="card border-0 bg-light shadow">
             <div className="card-body p-5">
-              <h2 className="card-title text-center mb-4">Connexion</h2>
+              <h2 className="card-title text-center mb-4">Login</h2>
               <form onSubmit={handleFormSubmit}>
-                <div className="form-group">
+                <div className="form-group contenuLambda">
                   <label htmlFor="nom">Nom d'utilisateur</label>
-                  <input type="text" className="form-control" id="nom" placeholder="Entrez votre nom d'utilisateur" value={username} onChange={(e) => setUsername(e.target.value)} />
+                  <input type="text" className="form-control " id="nom" placeholder="Entrez votre nom d'utilisateur" value={username} onChange={(e) => setUsername(e.target.value)} />
                 </div>
                 <br />
-                <div className="form-group">
-                  <label htmlFor="motDePasse">Mot de passe</label>
+                <div className="form-group contenuLambda">
+                  <label htmlFor="motDePasse" >Mot de passe</label>
                   <input type="password" className="form-control" id="motDePasse" placeholder="Entrez votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <br />
-                {errorMessage && <p className="text-danger">{errorMessage}</p>}
-                <button type="submit" className="btn btn-danger btn-block">Connexion</button>
+                {errorMessage && <p className="text-danger contenuLambda">{errorMessage}</p>}
+                <button type="submit" className="btn btn-danger btn-block ">Connexion</button>
               </form>
             </div>
           </div>

@@ -41,6 +41,7 @@ function ShoesList() {
                     <p>Chargement...</p>
                 ) : Shoes.length > 0 ? (
                     Shoes.map(shoe => (
+                        
                         <ShoesCard key={shoe.id} id={shoe.id} nom={shoe.nom} prix={shoe.prix} image={shoe.image} disponibilite={shoe.disponibilite} />
                     ))
                 ) : (

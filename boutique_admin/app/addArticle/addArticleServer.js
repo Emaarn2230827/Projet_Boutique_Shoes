@@ -15,6 +15,7 @@
         const image = getFilePathImage(formData.get('image'));
         const prix = formData.get('prix');
         const description = formData.get('description');
+        const lien = formData.get('lien');
 
         await fetch('http://localhost:3000/chaussures', {
             method: 'POST',
@@ -29,7 +30,8 @@
                 tailles: ["38","39", "40", "41", "42", "43", "44"],
                 totalParTailles: [5,5,8,8,10,10,10],
                 disponibilite: true,
-                description: description
+                description: description,
+                lienPaiement: lien
             })
       
         });
