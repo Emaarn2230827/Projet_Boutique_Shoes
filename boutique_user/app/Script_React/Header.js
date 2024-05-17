@@ -41,12 +41,12 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item col-lg-2">
-                <Link href="/categorieShoes/femme" className="nav-link mx-5 contenuLambda">
+                <Link href="#" className="nav-link mx-5 contenuLambda">
                   Femme
                 </Link>
               </li>
               <li className="nav-item col-lg-2">
-                <Link href="/categorieShoes/enfant" className="nav-link mx-5 contenuLambda">
+                <Link href="#" className="nav-link mx-5 contenuLambda">
                   Enfant
                 </Link>
               </li>

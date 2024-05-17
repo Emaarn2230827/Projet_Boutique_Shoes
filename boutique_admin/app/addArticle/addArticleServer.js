@@ -6,7 +6,7 @@
         const getFilePathImage = (file) => {
             if(file){
                 const fileName = file.name;
-                const filePath = `images/shoesH/${fileName}`;
+                const filePath = `/images/shoesH/${fileName}`;
                 return filePath;
             } else {
                 return '';

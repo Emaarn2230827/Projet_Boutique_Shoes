@@ -62,7 +62,8 @@ function ShoesDetails({ chaussureId }) {
       console.error("Erreur lors de l'ajout de l'article au panier :", error);
     }
   }
-  if (chaussure.disponibilite || chaussure.totalEnStock > 0) {
+
+  if ((chaussure.disponibilite === true || chaussure.disponibilite === "on")) {
   return (
     <div className="container-fluid">
       <br />

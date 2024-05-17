@@ -17,6 +17,7 @@ export default function Homme() {
       try {
         const response = await fetch(`http://localhost:3000/chaussures?nom=${nomShoes}`);
         const json = await response.json();
+        console.log(json);
         if (json.length > 0) {
           setChaussure(json[0]); // affiche uniquement la première chaussure trouvée
           setOffcanvasVisible(true); // Ouvrir le offcanvas lorsqu'une chaussure correspondante est trouvée

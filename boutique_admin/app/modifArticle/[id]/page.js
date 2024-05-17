@@ -18,7 +18,8 @@ export default function ModifShoesForm({params}) {
             const response = await  fetch(`http://localhost:3000/chaussures/${params.id}`);
             const json = await response.json();
             setChaussure(json);
-            
+            setDisponibilite(json.disponibilite === true || json.disponibilite === 'on' ? true : false);
+
         } catch (error) {
             console.error('Erreur lors de la récupération des données:', error);
             
@@ -55,7 +56,7 @@ const handleChange = (event) => {
                 <form action={modifChaussure}>
                   <div className="form-group">
                   <label htmlFor="nom">Id chaussure </label>
-                    <input type="text" className="form-control" id="id" name="id" value={params.id} onChange={handleChange}/>
+                    <input type="text" className="form-control" id="id" name="id" value={params.id}  readOnly/>
                   </div>
                   <div className="form-group">
                     <label htmlFor="nom">Nom de la chaussure</label>
@@ -63,7 +64,8 @@ const handleChange = (event) => {
                   </div>
                   <div className="form-group">
                     <label htmlFor="image">URL de l'image</label>
-                    <input type="text" className="form-control" id="image" name="image" value={chaussure.image} onChange={handleChange}/>
+                    <input type="text" className="form-control" id="img" name="img" value={chaussure.image} readOnly/>
+                    <input type="file" className="form-control" id="image" name="image"  required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="prix">Prix</label>

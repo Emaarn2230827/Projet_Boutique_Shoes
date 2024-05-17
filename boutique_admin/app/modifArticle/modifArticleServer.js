@@ -3,7 +3,16 @@
     export default async function modifShoes(formData) {
         const id = formData.get('id');
         const nom = formData.get('nom');
-        const image = formData.get('image');
+        const getFilePathImage = (file) => {
+            if(file){
+                const fileName = file.name;
+                const filePath = `/images/shoesH/${fileName}`;
+                return filePath;
+            } else {
+                return '';
+            }
+        }
+        const image = getFilePathImage(formData.get('image'));
         const prix = formData.get('prix');
         const description = formData.get('description');
         const disponibilite = formData.get('disponibilite');
