@@ -11,30 +11,37 @@ export default function Homme() {
   const [nomShoes, setNomShoes] = useState('');
   const [chaussure, setChaussure] = useState(null);
   const [offcanvasVisible, setOffcanvasVisible] = useState(false); // Nouvel état pour contrôler la visibilité du offcanvas
-
-  useEffect(() => {
-    async function fetchResearchChaussures() {
-      try {
-        const response = await fetch(`http://localhost:3000/chaussures?nom=${nomShoes}`);
-        const json = await response.json();
-        console.log(json);
-        if (json.length > 0) {
-          setChaussure(json[0]); // affiche uniquement la première chaussure trouvée
+useEffect(() => {
+  async function fetchResearchChaussures() {
+    try {
+      const response = await fetch(`http://localhost:3000/chaussures?nom=${nomShoes}`);
+      const json = await response.json();
+ 
+      if (json.length > 0) {
+        const normalizedNomShoes = nomShoes.toLowerCase();
+        const matchingShoe = json.find(shoe => shoe.nom.toLowerCase() === normalizedNomShoes);
+        if (matchingShoe) {
+          setChaussure(matchingShoe); // Affiche uniquement la chaussure correspondante trouvée
           setOffcanvasVisible(true); // Ouvrir le offcanvas lorsqu'une chaussure correspondante est trouvée
           setNomShoes('');
         } else {
           setChaussure(null); // Réinitialiser si aucune chaussure n'est trouvée
-          alert('Aucune chaussure correspondante n\'a été trouvé');
+          alert('Aucune chaussure correspondante n\'a été trouvée');
         }
-      } catch (error) {
-        console.error('Erreur lors de la recherche des chaussures:', error);
+      } else {
+        setChaussure(null); // Réinitialiser si aucune chaussure n'est trouvée
+        alert('Aucune chaussure correspondante n\'a été trouvée');
       }
+    } catch (error) {
+      console.error('Erreur lors de la recherche des chaussures:', error);
     }
+  }
+ 
+  if (nomShoes !== '') {
+    fetchResearchChaussures();
+  }
+}, [nomShoes]);
 
-    if (nomShoes !== '') {
-      fetchResearchChaussures();
-    }
-  }, [nomShoes]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault(); 
