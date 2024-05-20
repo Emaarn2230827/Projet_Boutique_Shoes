@@ -48,7 +48,7 @@ export default function Homme() {
       <div className={`offcanvas offcanvas-end ${offcanvasVisible ? 'show' : ''}`} tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasRightLabel">Resultat de la recherche</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setOffcanvasVisible(false)}></button>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setOffcanvasVisible(false)}></button>
 
 
         </div>

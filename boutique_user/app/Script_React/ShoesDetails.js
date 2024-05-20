@@ -70,7 +70,8 @@ function ShoesDetails({ chaussureId }) {
       <div className="row">
         <div className="col-6 col-lg-6">
           <Image src={chaussure.image} alt={chaussure.nom} width={330} height={300} />
-          <p className="col-8 col-lg-8 contenuLambda"><h3 >Description</h3> {chaussure.description}</p>
+          <h3 >Description</h3>
+          <p className="col-8 col-lg-8 contenuLambda"> {chaussure.description}</p>
         </div>
         <div className="col-6 col-lg-6">
           <form action={addChaussurePanier}>
