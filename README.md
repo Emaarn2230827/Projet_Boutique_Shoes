@@ -8,7 +8,7 @@
   Ouvrir le dossier Maquettes et installer des différentes police d'écriture
 soit: Luckiest_Guy et Jim_Nightshade.
 
-  Ouvrir le terminal et installer le node module avec la commande:
+  Ouvrir le terminal et installer le node module dans le repertoire boutique_admin et boutique_user avec la commande:
     .npm install
 
   Pour lancer la partie administrateur ou client, il faut d'abord démarrer le fichier db.json contenant les informations sur nos chaussures, avec la commande suivante dans le terminal:
