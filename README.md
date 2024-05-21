@@ -5,8 +5,12 @@
   La partie client située dans le répertoire boutique_user permet la consultation et l'achat individuel des articles de la boutique.
 
 # Démarrage
+  Ouvrir le dossier Maquettes et installer des différentes police d'écriture
+soit: Luckiest_Guy et Jim_Nightshade.
+
   Ouvrir le terminal et installer le node module avec la commande:
     .npm install
+
   Pour lancer la partie administrateur ou client, il faut d'abord démarrer le fichier db.json contenant les informations sur nos chaussures, avec la commande suivante dans le terminal:
     . json-server --watch db.json  (assurez-vous d'être dans le répertoire Projet_Boutique_Shoes lors de l'execution de cette commande)
   Ensuite,ouvrez un nouveau terminal et positionnez-vous dans le répertoire boutique_admin ou boutique_user avec la commande cd boutique_admin / cd boutique_user  puis lancez next.js avec la commande:
